@@ -1,0 +1,73 @@
+body{
+background-color: orange;
+}
+
+.header-container {
+height: auto;
+}
+
+header {
+width: 100%;
+height: auto;
+}
+
+.logo {
+width: 20%;
+float: none;
+margin: 0px auto;
+}
+
+nav {
+width: 65%;
+}
+
+.search {
+width: 30%;
+}
+
+/* ------------ SHOWCASE ------------*/
+
+.showcase {
+width: 100%;
+}
+
+ul.showcase-slides {
+width: 100%;
+height: auto;
+}
+
+ul.showcase-slides li {
+width: 100%;
+height: auto;
+}
+
+ul.showcase-slides li img{
+width: 100%;
+}
+
+ul.showcase-thumbnails li {
+width: 25%;
+height: auto;
+}
+
+ul.showcase-thumbnails img {
+width: 100%;
+}
+
+.showcase-text {
+position: relative;
+bottom: 0px;
+width: 100%;
+background-color: black;
+}
+
+
+ul.showcase-tumbnails li {
+width: 50px;
+hight: 50x;
+margin-right: 20px;
+}
+
+ul.showcase-tumbnails li img {
+display: none;
+}

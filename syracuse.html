@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<html>
+     <head>
+
+<!-- import necessary links -->	
+	      <script type="text/javascript" src="js/modernizr.js"></script>
+          <meta charset="utf-8" />	 
+		  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+		    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	      <title>Food Intro</title>
+		  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans|Alegreya+SC' rel='stylesheet' type='text/css'>
+		  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+		  <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
+		  <link href='http://fonts.googleapis.com/css?family=New+Rocker' rel='stylesheet' type='text/css'>
+		  <link href='http://fonts.googleapis.com/css?family=IM+Fell+Great+Primer' rel='stylesheet' type='text/css'>
+		  <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Mouse+Memoirs' rel='stylesheet' type='text/css'>
+		  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+          <link media="only screen and (max-width: 980px)" rel="stylesheet" type="text/css" href="css/tablet.css"  />
+		  <link media="only screen and (max-width: 700px)" rel="stylesheet" type="text/css" href="css/mobile.css" />
+
+		    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+			
+		<style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	li {
+		display: inline;
+		font-size: 30px;
+		padding-right: 20px;
+		color: green;
+		}
+		</style>	
+			
+	 </head>
+	 
+	 <body>
+	 
+<! -- header -->	 	
+	     <div class="header-container">
+		      <header>
+			  <!-- logo  -->
+			       <div class="logo"><a href="index.html">
+				  <img src="images/logo.jpg" alt="Main logo" />	  
+				   </div>
+				   <nav>
+
+						<ul>
+							<li class="about"><a href="about.html">About</a></li>
+							<li class="syracuse"><a href="syracuse.html">Syracuse</a></li>
+							<li class="others"><a href="others.html">Others</a></li>
+							<li class="contact"><a href="contact.html">Contact Us</a></li>
+						</ul>
+
+				   </nav>
+
+				   <div class="fix"></div><!-- prevent collapse -->
+			  </header>
+		 </div><!--  /header container -->
+		
+		<div class="container">
+  <div class="jumbotron">
+    <h1>Syracuse Restaurants</h1>    
+	<br/>
+	<ul>
+  <li class="dino">Dinosaur Bar-B-Que</a></li>
+  <li class="gang">Gangnam Style</a></li>
+  <li class="appe">Appethaizing</a></li>
+  <li class="cal">Calios</a></li>
+	</ul>
+	<br/>
+	<!-- Dinosaur BBQ -->
+	<div class="dinosaur" style="line-height: 150%">
+	<h2 style="font-weight: bold; font-size: 30px">Dinosaur Bar-B-Que</h2>
+	<br/>
+	<p>The only traditional barbeque restaurant in Syracuse</p>
+	<h2 style="font-weight: bold; font-size: 25px">Location</h2>
+	<br/>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.4671742627465!2d-76.15688248445385!3d43.05264107914665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3b8019f2991%3A0x58d5929e21a62e5!2sDinosaur+Bar-B-Que!5e0!3m2!1sen!2sus!4v1494123889552"
+ width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+ <div id="player" style="float: right; margin-right: 200px"></div>
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '250',
+          width: '400',
+          videoId: 'Wv51AITPXo8' ,
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 0);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+ 
+ 
+	<br/>
+	<br/>
+	<h2 style="font-weight: bold; font-size: 25px">Popular Menus</h2>
+	<br/>
+	<div style="margin-bottom: 150px">
+	<p style="float: left; margin-right: 10px"><img src="images/dinosaur_greentomatoes.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Original Fried Green Tomatoes</p>
+    <p>Crispy fried, sprinkled with pecorino Romano cheese and served with cayenne buttermilk ranch dressing</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/dinosaur_jumbowings.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Jumbo BBQ Chicken Wings</p>
+    <p>Spice-rubbed smoked wings finished on grill and served with vegetables</p>
+	</div>
+	<div style="margin-bottom: 150px">
+	<p style="float: left; margin-right: 10px"><img src="images/dinosaur_bbqpork.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Bar-B-Que Pork ribs Plate</p>
+    <p>St. Louis ribs that are cooked with original BBQ sauce and served with honey lush cornbread and 2 homemade dishes. (highly recommended)</p>
+	</div>
+	<div style="margin-bottom: 150px">
+	<p style="float: left; margin-right: 10px"><img src="images/dinosaur_bigpork.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Big Ass Pork Plate</p>
+    <p>Pulled pork shoulder barbeque that are served with honey lush cornbread and 2 homemade dishes</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/dinosaur_baconburger.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Bacon Cheese Burger</p>
+    <p>Classic hamburger with smoked bacon and cheese</p>
+	</div>
+	</div>
+
+	<!-- Gangnam Style -->
+	<div class="gangnamstyle" style="display: none; line-height: 150%">
+	<h2 style="font-weight: bold; font-size: 30px">Gangnam Style</h2>
+	<br/>
+	<p>A Korean food restaurant that serves Korean food cooked in a traditional way</p>
+	<h2 style="font-weight: bold; font-size: 25px">Location</h2>
+	<br/>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.9905238071005!2d-76.1209829844542!3d43.04163087914697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f312433586cb%3A0x237a01f2e4013e2a!2sGangnam+Style+Korean+Kitchen!5e0!3m2!1sen!2sus!4v1494121119954" 
+width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<br/>
+	<br/>
+	<h2 style="font-weight: bold; font-size: 25px">Popular Menus</h2>
+	<br/>
+	<div style="margin-bottom: 150px">
+	<p style="float: left; margin-right: 10px"><img src="images/gangnam_gimbap.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Gimbap</p>
+    <p>made from cooked rice (that contain various ingredients) rolled in gim (dried sheets of seaweed) often served as a bite-size slices. </p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/gangnam_omelette.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Omelette Rice</p>
+    <p>Fried rice with pork and vegetable covered with a sheet of egg</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/gangnam_tteok.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Tteok Bokki</p>
+    <p>Korea rice cake stir fried with red hot chili sauce</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/gangnam_bibimbap.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Bibimbap</p>
+    <p>Rice mixed with vegetables with meat (beef, chicken, or pork)</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/gangnam_budae.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Budae Jjigae</p>
+    <p>Spicy stew with kimchi, spam, sausage, tofu, and noodle (editor’s choice)</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/gangnam_sundubu.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Sundubu Jjigae</p>
+    <p>Spicy stew with soft tofu and meat (beef, seafood, chicken, or pork)</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/gangnam_galbitang.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Galbi Tang</p>
+    <p>Boiled beef stew with sliced radish</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/gangnam_wings.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Wings</p>
+    <p>Many flavors are available but red chili sauce (aka. Korean Style sauce) is highly recommended</p>
+	</div>
+	</div>
+
+	<!-- AppeThaizing -->
+	<div class="appethaizing" style="display: none; line-height: 150%">
+	<h2 style="font-weight: bold; font-size: 30px">AppeThaizing</h2>
+	<br/>
+	<p>Fresh and delicious foods with reasonable price</p>
+	<h2 style="font-weight: bold; font-size: 25px">Location</h2>
+	<br/>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.516556304185!2d-76.1560336844539!3d43.051602279146486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3a1be35ab37%3A0xa2ab3393f3000631!2sappeThaizing!5e0!3m2!1sen!2sus!4v1494125040245" 
+width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<br/>
+	<br/>
+	<h2 style="font-weight: bold; font-size: 25px">Popular Menus</h2>
+	<br/>
+	<div style="margin-bottom: 150px">
+	<p style="float: left; margin-right: 10px"><img src="images/appethaizing_padthai.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Pad Thai</p>
+    <p>Rice noodles, egg, bean sprouts, chives, and peanut tamarind sauce with your choice of meat/tofu</p>
+	</div>
+	<div style="margin-bottom: 150px">
+	<p style="float: left; margin-right: 10px"><img src="images/appethaizing_padkeemow.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Pad Kee Mow (Drunken Noodle)</p>
+    <p>Flat rice noodles, egg, broccoli, chili, tomatoes, and sweet basil with your choice of meat/tofu</p>
+	</div>
+	<div style="margin-bottom: 150px">
+	<p style="float: left; margin-right: 10px"><img src="images/appethaizing_padseeew.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Pad See Ew (Brown Noodle)</p>
+    <p>Flat rice noodles, sweet soy sauce, egg, broccoli, mushrooms, and baby corn with your choice of meat/tofu</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/appethaizing_zingshrimp.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Zing Shrimp</p>
+    <p>Fried shrimp with spicy Sriracha cream sauce with vegetables (highly recommended)</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/appethaizing_redcurry.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Red Curry</p>
+    <p>Your choice of meat/tofu with mushrooms, bamboo shoots, chili peppers, and basil in Thai red curry and coconut milk. Served with rice</p>
+	</div>
+	</div>
+	
+	<!-- Calios -->
+	<div class="calios" style="display: none; line-height: 150%">
+	<h2 style="font-weight: bold; font-size: 30px">Calios</h2>
+	<br/>
+	<p>Cheap & late night and fast delivery</p>
+	<h2 style="font-weight: bold; font-size: 25px">Location</h2>
+	<br/>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.983811827008!2d-76.138301284726!3d43.04177209976956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3a1c0da87a7%3A0x385c798b595ad0ab!2sCalios!5e0!3m2!1sen!2sus!4v1494124655887" 
+width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<br/>
+	<br/>
+	<h2 style="font-weight: bold; font-size: 25px">Popular Menus</h2>
+	<br/>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/calios_chicken.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Chicken Bacon Ranch Calzone</p>
+    <p>Calzone with chicken, bacon, ranch, and mozzarella</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/calios_bbq.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Barbeque Chicken Calzone</p>
+    <p>Calzone with chicken, bacon, BBQ sauce, mozzarella, and cheddar</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/calios_pepperoni.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Pepperoni Calzone</p>
+    <p>Pepperoni, mozzarella, and ricotta</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/calios_create.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Create Your Own Calzone</p>
+    <p>Created a calzone with your choice of ingredients; highly recommended</p>
+	</div>
+	<div style="margin-bottom: 170px">
+	<p style="float: left; margin-right: 10px"><img src="images/calios_wings.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Boneless Wings</p>
+    <p>1LB of boneless wings with your choice of flavor</p>
+	</div>
+	</div>
+	
+	
+	
+	
+  </div> 
+</div>
+		
+	
+		 
+		 <script type="text/javascript" src="js/jquery.js"></script>
+		 <script type="text/javascript" src="js/custom.js"></script>
+		
+
+		 </body>
+		 
+		
+		<footer>
+		<div class="footer">
+		<h3 style="text-align: center;">&copy; Copyright 2017, Syracuse Food Intro</h3>
+		</div>
+		</footer>
+		 
+</html>
+</html>

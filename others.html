@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<html>
+     <head>
+
+<!-- import necessary links -->	
+	      <script type="text/javascript" src="js/modernizr.js"></script>
+          <meta charset="utf-8" />	 
+		  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+		    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	      <title>Food Intro</title>
+		  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans|Alegreya+SC' rel='stylesheet' type='text/css'>
+		  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+		  <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
+		  <link href='http://fonts.googleapis.com/css?family=New+Rocker' rel='stylesheet' type='text/css'>
+		  <link href='http://fonts.googleapis.com/css?family=IM+Fell+Great+Primer' rel='stylesheet' type='text/css'>
+		  <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Mouse+Memoirs' rel='stylesheet' type='text/css'>
+		  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+          <link media="only screen and (max-width: 980px)" rel="stylesheet" type="text/css" href="css/tablet.css"  />
+		  <link media="only screen and (max-width: 700px)" rel="stylesheet" type="text/css" href="css/mobile.css" />
+
+		    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">	
+			
+	 </head>
+	 
+	 <body>
+	 
+<!-- header -->	 	
+	     <div class="header-container">
+		      <header>
+			  <!-- logo  -->
+			       <div class="logo"><a href="index.html">
+				  <img src="images/logo.jpg" alt="Main logo" />	  
+				   </div>
+				   <nav>
+
+						<ul>
+							<li class="about"><a href="about.html">About</a></li>
+							<li class="syracuse"><a href="syracuse.html">Syracuse</a></li>
+							<li class="others"><a href="others.html">Others</a></li>
+							<li class="contact"><a href="contact.html">Contact Us</a></li>
+						</ul>
+						
+				   </nav>
+
+				   <div class="fix"></div><!-- prevent collapse -->
+			  </header>
+		 </div><!--  /header container -->
+		
+		<div class="container" style=" line-height: 150%">
+  <div class="jumbotron">
+    <h1>Others</h1>      
+	<br/>
+	<br/>
+	<p>In case you didn’t like our choice of restaurants, we got an alternative recommendation you might enjoy.
+As Koreans, we would like to recommend Korean food that are accessible at any Korean restaurant in the U.S. 
+	</p>
+	<p>These are the choices of food that cannot go wrong for anyone: </p>
+	<br/>
+	<div style="margin-bottom: 60px">
+	<p style="float: left; margin-right: 10px"><img src="images/others_bbq.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Korean Barbecue</p>
+    <p>With your choice of meat, you roast them with diner’s table on gas or charcoal grills that are built in the table itself. 
+	Some restaurants that do not have any built-grills have portable stoves for their customers. 
+	The fact that you can cook anything you want in your own way will make your experience satisfying. We personally prefer Samgyeopsal (pork belly).</p>
+	</div>
+	<p style="font-weight: bold;">How to Eat Korean Barbecue</p>
+	<div id="player" style="float: left"></div>
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '250',
+          width: '400',
+          videoId: 'yyB3bhKiffM' ,
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 0);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+	
+
+	<br/>
+	<br/>
+	<div style="margin-top: 240px; margin-bottom: 50px">
+	<p style="float: left; margin-right: 10px"><img src="images/others_bulgogi.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Bulgogi</p>
+    <p>Bulgogi is a stir-fried beef marinated by Bulgogi sauce. The beef is first sliced then marinated with the sauce and other various vegetables (mainly onions). 
+	Then, the Bulgogi is put to sleep so it can age for a day to absorb more flavor from the sauce. When the margination is finally complete, the Bulgogi will be cooked 
+	on a grill or a fry pan. The sweet and flavorful beef is often served with other side dishes and rice. Amazing food. </p>
+	</div>
+	<div style="margin-bottom: 70px">
+	<p style="float: left; margin-right: 10px"><img src="images/others_seolloengtang.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Seolloengtang</p>
+    <p>Seolleongtang is an ox-bone soup with its signature milky white color broth. The soup will contain some strips of meat, finely chopped scallions, noodles, 
+	and broth from boiling ox bone tail in water for about a day. This amazing milky soup is served with rice and other side dishes. If you have a mild taste, 
+	this soup can never go wrong.</p>
+	</div>
+	<div style="margin-bottom: 80px">
+	<p style="float: left; margin-right: 10px"><img src="images/others_japchae.jpg" height="200" width="230px" style="padding:1px; border:thin solid black"></p>
+	<p style="font-weight: bold;">Japchae</p>
+    <p>Japchae is a Korean stir-fried glass noodle. It is stir fried with sesame seed oil with vegetables, sometimes served with beef, and flavored with soy sauce. 
+	Glass noodle’s chewiness makes the taste more flavorful and the fact that it has many vegetable in it makes it very healthy for your body. </p>
+	</div>
+
+		  </div> 
+		 </div>
+		 
+	
+		 </body>
+		 
+		
+		<footer>
+		<div class="footer">
+		<h3 style="text-align: center;">&copy; Copyright 2017, Syracuse Food Intro</h3>
+		</div>
+		</footer>
+		 
+		
+</html>
+</html>

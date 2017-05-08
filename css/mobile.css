@@ -1,0 +1,57 @@
+body{
+background-color:pink;
+}
+.logo {
+width: 100%;
+text-align: center;
+}
+
+nav {
+float: none;
+width: 100%;
+height: auto;
+}
+
+nav ul li {
+float: none;
+line-height: 50px;
+text-align: center;
+}
+
+.search {
+float: none;
+width: 100%;
+text-align: center;
+}
+
+.search input {
+width: 60%;
+}
+
+.showcase-text {
+position: relative;
+bottom: 0px;
+width: 100%;
+background-color: black;
+}
+
+ul.showcase-thumbnails {
+width: 260px;
+height: 50px;
+margin: 0px auto;
+}
+
+ul.showcase-thumbnails li {
+width: 50px;
+height: 50px;
+
+margin-right: 20px;
+}
+
+ul.showcase-thumbnails li:last-child {
+margin-right: 0px;
+}
+
+ul.showcase-thumbnails li img {
+display: none;
+}
