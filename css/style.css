@@ -1,0 +1,137 @@
+body {
+background-color: tan;
+}
+
+/* header */
+
+.header-container {
+height: 100px;
+background-color: orange;
+}
+
+header {
+width: 960px;
+height: 100px;
+margin: 0px auto;
+}
+
+.logo {
+width: 170px;
+height: 100px;
+float: left;
+margin-right: 10px;
+}
+
+nav {
+width: 650px;
+height: 100px;
+float: left;
+}
+
+nav ul li {
+float: left;
+padding-left: 15px;
+padding-right: 25px;
+line-height: 100px;
+}
+
+nav ul li a {
+font-family: 'Trebuchet MS';
+font-size: 22px;
+color: white;
+font-weight: bold;
+text-shadow: -1px 0 #000;
+text-decoration: none; /* remove underlines */
+}
+
+
+nav ul li.hovering {
+background-color: orange;
+opacity: 0.2;
+}
+
+
+/* Image Showcase */
+
+.showcase-container {
+background-color: tan;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.showcase {
+width: 960px;
+margin: 0px auto; /* center */
+background-color: white;
+}
+
+ul.showcase-slides {
+width: 960px;
+height: 600px;
+position: relative;
+}
+
+ul.showcase-slides li {
+width: 960px;
+height: 600px;
+background-color: white;
+position: absolute;
+top: 0px;
+left: 0px;
+display: none;
+}
+
+.showcase-text {
+width: 400px;
+background-color: rgba(0,0,0,.4);
+position: absolute;
+bottom: 20px;
+right: 0px;
+}
+
+.showcase-text-padding {
+padding: 20px;
+}
+
+.showcase-text-padding h2 {
+font-family: 'Times', serif;
+color: white;
+font-size: 36px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.showcase-text-padding p a {
+font-family: 'Times', sans-serif;
+color: red;
+font-size: 18px;
+font-weight: bold;
+text-decoration: none; /*removes underline */
+text-transform: uppercase; /* caps */
+margin-left: 3px;
+}
+
+ul.showcase-thumbnails li {
+width: 240px;
+height: 120px;
+float: left;
+opacity: 0.8;
+}
+
+ul.showcase-thumbnails li.active {
+opacity: 1.0;
+}
+
+
+
+
+.footer {
+background-color: orange;	
+height: 30px;
+}
+
+
+.fix {
+clear: both;
+}
+
